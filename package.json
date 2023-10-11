@@ -1,32 +1,39 @@
 {
-  "name": "twind-cli-pro",
-  "version": "0.0.1",
+  "name": "tailwind-cli-tool",
+  "version": "0.0.3",
   "description": "setup tailwindCSS within just  one command",
   "type": "module",
-  "displayName": "twind-cli-pro",
+  "displayName": "tailwind-cli-tool",
   "keywords": [
     "cli",
     "tailwindCSS",
     "commander",
     "twind-cli",
+    "tailwind-cli-pro",
+    "inertiajs",
+    "vue",
+    "laravel",
     "react",
     "js",
     "vanilla",
     "front-end"
   ],
-  "bin": "./main.js",
+  "bin": {
+    "tailwind-cli-tool": "main.js"
+  },
   "main": "./main.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint"
   },
   "author": "MD Naimul Islam",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Naimul007A/T_wind-cli-pro"
+    "url": "git+https://github.com/Naimul007A/T_wind-cli-pro.git"
   },
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.2.0",
+    "call-bind": "^1.0.2",
+    "chalk": "^5.3.0",
     "inquirer": "^9.1.5",
     "shelljs": "^0.8.5"
   },

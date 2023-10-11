@@ -8,7 +8,7 @@ To use with your project use this command in terminal
 
 ```
 
-npx twind-cli-pro
+npx tailwind-cli-tool
 
 ```
 
