@@ -1,4 +1,4 @@
-## twind-cli-pro
+## tailwind-cli-tool
 
 ### Setup your TailwindCSS within just 1 Command
 
