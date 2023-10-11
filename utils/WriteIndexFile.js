@@ -1,11 +1,11 @@
-import fs from "fs";
+import fs from 'fs';
 
-import TailwindDirectives from "./tailwindDirectives.js";
+import TailwindDirectives from './tailwindDirectives.js';
 
-import chalk from "chalk";
+import chalk from 'chalk';
 
-const WriteIndexFile = (msg = "index.css not found!\n Creating index.css") => {
-  fs.writeFile("src/index.css", TailwindDirectives, function (err) {
+const WriteIndexFile = (msg = 'index.css not found!\n Creating index.css') => {
+  fs.writeFile('./src/assets/main.css', TailwindDirectives, function (err) {
     if (err) throw err;
     console.log(chalk.green(msg));
   });

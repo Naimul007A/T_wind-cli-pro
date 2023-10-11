@@ -7,7 +7,7 @@ import { getProjectTypeWithAI } from './utils/utils.js';
 async function askQuestion() {
   console.log(
     Chalk.bgRed.white(
-      'tailwind-cli-tool@0.0.1' + ' ' + Chalk.white('By Naimul Islam'),
+      'tailwind-cli-tool@0.0.5' + ' ' + Chalk.white('By Naimul Islam'),
     ),
   );
   try {

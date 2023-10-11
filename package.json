@@ -1,6 +1,6 @@
 {
   "name": "tailwind-cli-tool",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "setup tailwindCSS within just  one command",
   "type": "module",
   "displayName": "tailwind-cli-tool",

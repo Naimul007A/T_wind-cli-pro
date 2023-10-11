@@ -8,10 +8,10 @@ async function checkSrcFolder() {
     const isSrcFolderExists = fs.existsSync('./src');
 
     if (isSrcFolderExists) {
-      const isIndexCssExists = fs.existsSync('./src/index.css');
+      const isIndexCssExists = fs.existsSync('./src/assets/main.css');
 
       if (isIndexCssExists) {
-        inquirer
+        await inquirer
 
           .prompt([
             {
@@ -30,7 +30,7 @@ async function checkSrcFolder() {
             }
           });
       } else {
-        WriteIndexFile;
+        WriteIndexFile('Creating index.css with tailwind directives');
       }
     } else {
       CreateSrc();
