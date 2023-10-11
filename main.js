@@ -16,13 +16,13 @@ async function askQuestion() {
     ]);
     switch (projectType) {
       case "laravel":
-        ForReact();
+        Laravel();
         break;
       case "inertia.js":
-        ForReact();
+        Laravel();
         break;
       case "vue.js":
-        ForReact();
+        Vue();
         break;
       default:
         console.log("Please select a valid option");

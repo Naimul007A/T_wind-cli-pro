@@ -6,8 +6,19 @@ import shell from "shelljs";
 
 import checkSrcFolder from "../middleware/checkSrcFolder.js";
 
-import tailwindConfig from "../utils/tailwindConfig.js";
-
+let laraveltailwindConfig = `/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+      "./resources/**/*.blade.php",
+      "./resources/**/*.vue",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+`;
+import TailwindDirectives from "../utils/tailwindDirectives.js";
 import getPackageManager from "../utils/getPackageManager.js";
 
 const Laravel = async () => {
@@ -21,9 +32,16 @@ const Laravel = async () => {
 
   shell.exec("npx tailwindcss init -p");
 
-  await fs.writeFile("./tailwind.config.js", tailwindConfig);
+  await fs.writeFile("./tailwind.config.js", laraveltailwindConfig);
 
-  checkSrcFolder();
+  await fs.writeFile(
+    "resources/css/app.css",
+    TailwindDirectives,
+    function (err) {
+      if (err) throw err;
+      console.log(Chalk.green("Tawilind directives added to app.css"));
+    }
+  );
 };
 
 export default Laravel;
